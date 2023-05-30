@@ -1,0 +1,21 @@
+
+
+@mixin tile($gcs, $gce, $grs, $gre) {
+    grid-column-start: $gcs;
+    grid-column-end: $gce;
+    grid-row-start: $grs;
+    grid-row-end: $gre;
+    border: black;
+    border-style: solid;
+    width: 197px;
+    height: 197px;
+}
+
+@mixin tileC($gcs, $gce, $grs, $gre) {
+    grid-column-start: $gcs;
+    grid-column-end: $gce;
+    grid-row-start: $grs;
+    grid-row-end: $gre;
+    width: 203px;
+    height: 203px;
+}

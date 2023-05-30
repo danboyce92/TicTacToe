@@ -1,0 +1,143 @@
+@import './mixins.scss';
+
+#screen {
+    position: relative;
+    width: 606px;
+
+    #turn-info {
+        margin: 15px auto;
+        text-align: center;
+        width: 606px;
+        font-size: 24px;
+    }
+    
+    #start {
+        display: flex;
+        justify-content: center;
+    
+        button {
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+    
+    #board-cover {
+        position: absolute;
+        width: 606px;
+        height:606px;
+        z-index: 1;
+    }
+
+    #board {
+        display: grid;
+        border: black;
+        border-style: solid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 606px;
+        height: 606px;
+
+        .tile {
+            font-size: 48px;
+            text-align: center;
+            line-height: 200px;
+            cursor: pointer;
+        }
+        .tile:hover {
+            background-color: beige;
+        }
+
+        .chosen {
+            background-color: beige;
+        }
+    
+        #tl {
+            @include tile(1,2,1,2);
+            user-select: none;
+        }
+        #tlCover {
+            @include tileC(1,2,1,2);
+            z-index: -1;
+        }
+        #tm {
+            @include tile(2,3,1,2);
+            user-select: none;
+        }
+        #tmCover {
+            @include tileC(2,3,1,2);
+            z-index: -1;
+
+        }
+        #tr {
+            @include tile(3,4,1,2);
+            user-select: none;
+        }
+        #trCover {
+            @include tileC(3,4,1,2);
+            z-index: -1;
+
+        }
+        #ml {
+            @include tile(1,2,2,3);
+            user-select: none;
+        }
+        #mlCover {
+            @include tileC(1,2,2,3);
+            user-select: none;
+            z-index: -1;
+
+        }
+        #mm {
+            @include tile(2,3,2,3);
+            user-select: none;
+        }
+        #mmCover {
+            @include tileC(2,3,2,3);
+            user-select: none;
+            z-index: -1;
+
+        }
+        #mr {
+            @include tile(3,4,2,3);
+            user-select: none;
+        }
+        #mrCover {
+            @include tileC(3,4,2,3);
+            user-select: none;
+            z-index: -1;
+
+        }
+        #bl {
+            @include tile(1,2,3,4);
+            user-select: none;
+        }
+        #blCover {
+            @include tileC(1,2,3,4);
+            user-select: none;
+            z-index: -1;
+        }
+        #bm {
+            @include tile(2,3,3,4);
+            user-select: none;
+        }
+        #bmCover {
+            @include tileC(2,3,3,4);
+            user-select: none;
+            z-index: -1;
+
+        }
+        #br {
+            @include tile(3,4,3,4);
+            user-select: none;
+        }
+        #brCover {
+            @include tileC(3,4,3,4);
+            user-select: none;
+            z-index: -1;
+
+        }
+    
+    }
+
+}
+

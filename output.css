@@ -1,0 +1,233 @@
+#screen {
+  position: relative;
+  width: 606px;
+}
+#screen #turn-info {
+  margin: 15px auto;
+  text-align: center;
+  width: 606px;
+  font-size: 24px;
+}
+#screen #start {
+  display: flex;
+  justify-content: center;
+}
+#screen #start button {
+  font-size: 24px;
+  cursor: pointer;
+}
+#screen #board-cover {
+  position: absolute;
+  width: 606px;
+  height: 606px;
+  z-index: 1;
+}
+#screen #board {
+  display: grid;
+  border: black;
+  border-style: solid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 606px;
+  height: 606px;
+}
+#screen #board .tile {
+  font-size: 48px;
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+}
+#screen #board .tile:hover {
+  background-color: beige;
+}
+#screen #board .chosen {
+  background-color: beige;
+}
+#screen #board #tl {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #tlCover {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 203px;
+  height: 203px;
+  z-index: -1;
+}
+#screen #board #tm {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #tmCover {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 203px;
+  height: 203px;
+  z-index: -1;
+}
+#screen #board #tr {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #trCover {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 203px;
+  height: 203px;
+  z-index: -1;
+}
+#screen #board #ml {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #mlCover {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 203px;
+  height: 203px;
+  user-select: none;
+  z-index: -1;
+}
+#screen #board #mm {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #mmCover {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 203px;
+  height: 203px;
+  user-select: none;
+  z-index: -1;
+}
+#screen #board #mr {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #mrCover {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 203px;
+  height: 203px;
+  user-select: none;
+  z-index: -1;
+}
+#screen #board #bl {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #blCover {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  width: 203px;
+  height: 203px;
+  user-select: none;
+  z-index: -1;
+}
+#screen #board #bm {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #bmCover {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  width: 203px;
+  height: 203px;
+  user-select: none;
+  z-index: -1;
+}
+#screen #board #br {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border: black;
+  border-style: solid;
+  width: 197px;
+  height: 197px;
+  user-select: none;
+}
+#screen #board #brCover {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  width: 203px;
+  height: 203px;
+  user-select: none;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=output.css.map */
