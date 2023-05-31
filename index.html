@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Slackside+One&family=Tsukimi+Rounded:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div id="screen">
-        <div id="board-cover"></div>
+        <div id="title">Tic-Tac-Toe</div>
         <div id="board">
+            <div id="board-cover"></div>
             <div onclick="chooseTile('tl')" class="tile" id="tl"></div>
             <div class="cover" id="tlCover"></div>
             <div onclick="chooseTile('tm')" class="tile" id="tm"></div>
@@ -39,6 +44,5 @@
     </div>
 
     <script src="./main.js"></script>
-    <script src="./winLogic.js"></script>
 </body>
 </html>

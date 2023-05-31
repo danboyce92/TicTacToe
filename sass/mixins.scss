@@ -5,10 +5,10 @@
     grid-column-end: $gce;
     grid-row-start: $grs;
     grid-row-end: $gre;
-    border: black;
+    border: #498C8A;
     border-style: solid;
-    width: 197px;
-    height: 197px;
+    width: clamp(90px, 30vw, 200px);
+    height: clamp(90px, 30vw, 200px);
 }
 
 @mixin tileC($gcs, $gce, $grs, $gre) {
@@ -16,6 +16,6 @@
     grid-column-end: $gce;
     grid-row-start: $grs;
     grid-row-end: $gre;
-    width: 203px;
-    height: 203px;
+    width: clamp(90px, 30vw, 200px);
+    height: clamp(90px, 30vw, 200px);
 }

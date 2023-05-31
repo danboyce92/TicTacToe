@@ -1,231 +1,267 @@
-#screen {
-  position: relative;
-  width: 606px;
+.colors {
+  color: #498C8A;
+  color: #EAC435;
+  color: #9649CB;
+  color: #afbbf2;
+  color: #d3fff3;
 }
-#screen #turn-info {
+
+.fonts {
+  font-family: "Monomaniac One", sans-serif;
+  font-family: "Slackside One", cursive;
+  font-family: "Tsukimi Rounded", sans-serif;
+}
+
+body {
+  background-color: #afbbf2;
+}
+body #screen {
+  position: relative;
+}
+body #screen #title {
+  font-family: "Slackside One", cursive;
+  font-size: clamp(2rem, 10vw, 3.5rem);
+  text-align: center;
+  color: #9649CB;
+  margin: 20px auto;
+}
+body #screen #turn-info {
+  font-family: "Tsukimi Rounded", sans-serif;
+  font-size: clamp(1.5rem, 10vw, 2rem);
+  color: #498C8A;
   margin: 15px auto;
   text-align: center;
-  width: 606px;
-  font-size: 24px;
+  width: clamp(250px, 60vw, 606px);
 }
-#screen #start {
+body #screen #start {
   display: flex;
   justify-content: center;
+  margin-top: 25px;
 }
-#screen #start button {
-  font-size: 24px;
+body #screen #start button {
+  font-family: "Tsukimi Rounded", sans-serif;
+  font-size: clamp(1.5rem, 10vw, 2rem);
   cursor: pointer;
+  background-color: #afbbf2;
+  border-radius: 15px;
+  padding: 5px 10px;
+  transition: all 0.3s ease-out;
 }
-#screen #board-cover {
+body #screen #start button:hover {
+  color: #EAC435;
+  background-color: #d3fff3;
+}
+body #screen #board-cover {
   position: absolute;
-  width: 606px;
-  height: 606px;
+  width: clamp(295px, 93vw, 610px);
+  height: clamp(295px, 93vw, 610px);
   z-index: 1;
 }
-#screen #board {
+body #screen #board {
+  position: relative;
+  margin: auto;
   display: grid;
-  border: black;
+  border: #498C8A;
   border-style: solid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: 606px;
-  height: 606px;
+  width: clamp(270px, 93vw, 610px);
+  height: clamp(270px, 93vw, 610px);
 }
-#screen #board .tile {
-  font-size: 48px;
+body #screen #board .tile {
+  font-family: "Monomaniac One", sans-serif;
+  font-size: clamp(2rem, 16vw, 4rem);
   text-align: center;
-  line-height: 200px;
+  line-height: clamp(90px, 30vw, 200px);
   cursor: pointer;
+  transition: background-color 0.5s ease-out;
 }
-#screen #board .tile:hover {
-  background-color: beige;
+body #screen #board .tile:hover {
+  background-color: #d3fff3;
 }
-#screen #board .chosen {
-  background-color: beige;
-}
-#screen #board #tl {
+body #screen #board #tl {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #tlCover {
+body #screen #board #tlCover {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   z-index: -1;
 }
-#screen #board #tm {
+body #screen #board #tm {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #tmCover {
+body #screen #board #tmCover {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   z-index: -1;
 }
-#screen #board #tr {
+body #screen #board #tr {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #trCover {
+body #screen #board #trCover {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   z-index: -1;
 }
-#screen #board #ml {
+body #screen #board #ml {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #mlCover {
+body #screen #board #mlCover {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
   z-index: -1;
 }
-#screen #board #mm {
+body #screen #board #mm {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #mmCover {
+body #screen #board #mmCover {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
   z-index: -1;
 }
-#screen #board #mr {
+body #screen #board #mr {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #mrCover {
+body #screen #board #mrCover {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
   z-index: -1;
 }
-#screen #board #bl {
+body #screen #board #bl {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 4;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #blCover {
+body #screen #board #blCover {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 4;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
   z-index: -1;
 }
-#screen #board #bm {
+body #screen #board #bm {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #bmCover {
+body #screen #board #bmCover {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
   z-index: -1;
 }
-#screen #board #br {
+body #screen #board #br {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
-  border: black;
+  border: #498C8A;
   border-style: solid;
-  width: 197px;
-  height: 197px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
 }
-#screen #board #brCover {
+body #screen #board #brCover {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
-  width: 203px;
-  height: 203px;
+  width: clamp(90px, 30vw, 200px);
+  height: clamp(90px, 30vw, 200px);
   user-select: none;
   z-index: -1;
 }
