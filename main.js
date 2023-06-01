@@ -1,18 +1,18 @@
 
 let playerTurn = false;
 let unavailableTiles = [];
-const startButton = document.getElementById('start');
-const turnInfo = document.getElementById('turn-info');
+let startButton = document.getElementById('start');
+let turnInfo = document.getElementById('turn-info');
 
-let tr = document.getElementById('tr').innerHTML;
-let tm = document.getElementById('tm').innerHTML;
-let tl = document.getElementById('tl').innerHTML;
-let mr = document.getElementById('mr').innerHTML;
-let mm = document.getElementById('mm').innerHTML;
-let ml = document.getElementById('ml').innerHTML;
-let br = document.getElementById('br').innerHTML;
-let bm = document.getElementById('bm').innerHTML;
-let bl = document.getElementById('bl').innerHTML;
+// let tr = document.getElementById('tr').innerHTML;
+// let tm = document.getElementById('tm').innerHTML;
+// let tl = document.getElementById('tl').innerHTML;
+// let mr = document.getElementById('mr').innerHTML;
+// let mm = document.getElementById('mm').innerHTML;
+// let ml = document.getElementById('ml').innerHTML;
+// let br = document.getElementById('br').innerHTML;
+// let bm = document.getElementById('bm').innerHTML;
+// let bl = document.getElementById('bl').innerHTML;
 
 //This function makes it playerOnes turn,
 //Removes an invisible cover protecting the tiles from use outside of a game.
@@ -60,17 +60,17 @@ const chooseTile = (tileId) => {
     }
     playerTurn = !playerTurn;
 
-    tr = document.getElementById('tr').innerHTML;
-    tm = document.getElementById('tm').innerHTML;
-    tl = document.getElementById('tl').innerHTML;
-    mr = document.getElementById('mr').innerHTML;
-    mm = document.getElementById('mm').innerHTML;
-    ml = document.getElementById('ml').innerHTML;
-    br = document.getElementById('br').innerHTML;
-    bm = document.getElementById('bm').innerHTML;
-    bl = document.getElementById('bl').innerHTML;
+    // tr = document.getElementById('tr').innerHTML;
+    // tm = document.getElementById('tm').innerHTML;
+    // tl = document.getElementById('tl').innerHTML;
+    // mr = document.getElementById('mr').innerHTML;
+    // mm = document.getElementById('mm').innerHTML;
+    // ml = document.getElementById('ml').innerHTML;
+    // br = document.getElementById('br').innerHTML;
+    // bm = document.getElementById('bm').innerHTML;
+    // bl = document.getElementById('bl').innerHTML;
 
-    console.log(tr, tm, tl, mr, mm, ml, br, bm, bl);
+    // console.log(tr, tm, tl, mr, mm, ml, br, bm, bl);
 
     if(checkIfWin()) {
         playerTurn = !playerTurn;
@@ -111,9 +111,8 @@ const checkIfWin = () => {
     return false;
   };
 
-
-
-// if (playerTurn) {
-//     const tiles = document.getElementById('tm');
-//     tiles.style.BackgroundColor = 'red';
-// }
+  module.exports = {
+    startGame,
+    playerTurn,
+    startButton
+  };
