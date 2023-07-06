@@ -46,6 +46,8 @@ body #screen #start button {
   border-radius: 15px;
   padding: 5px 10px;
   transition: all 0.3s ease-out;
+  box-shadow: 2px 2px rgba(0, 0, 0, .2);
+  
 }
 body #screen #start button:hover {
   color: #EAC435;
@@ -53,20 +55,18 @@ body #screen #start button:hover {
 }
 body #screen #board-cover {
   position: absolute;
-  width: clamp(295px, 93vw, 610px);
-  height: clamp(295px, 93vw, 610px);
+  width: clamp(300px, 97vw, 620px);
+  height: clamp(300px, 97vw, 620px);
   z-index: 1;
 }
 body #screen #board {
   position: relative;
   margin: auto;
   display: grid;
-  border: #498C8A;
-  border-style: solid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  width: clamp(270px, 93vw, 610px);
-  height: clamp(270px, 93vw, 610px);
+  width: clamp(270px, 93vw, 611px);
+  height: clamp(270px, 93vw, 611px);
 }
 body #screen #board .tile {
   font-family: "Monomaniac One", sans-serif;
