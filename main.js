@@ -129,15 +129,3 @@ const start = document.getElementById('start-button');
 start.addEventListener('click', startGame());
 
 //GSAP
-
-// gsap.to(start, {
-//   duration: 2,
-//   x: 200,
-//   rotation: 360,
-// });
-
-// module.exports = {
-//   startGame,
-//   playerTurn,
-//   startButton,
-// };
